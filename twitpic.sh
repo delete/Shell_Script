@@ -10,9 +10,10 @@
 
 LOGIN() {
 	##LOGIN
+
 	_login=$(\
-		yad --entry\
-		--entry-label="Login"\
+		yad --entry \
+		--entry-label="Login" \
 		--completion \
 		--editable \
 		--title="Entre com seu login." \
@@ -21,9 +22,10 @@ LOGIN() {
 
 
 	##SENHA
+
 	_senha=$(\
 		yad --entry \
-		--entry-label="Senha"\
+		--entry-label="Senha" \
 		--completion \
 		--editable \
 		--hide-text \
