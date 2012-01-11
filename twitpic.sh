@@ -3,7 +3,8 @@
 
 ##########################################################################################################
 ##Autor: Fellipe Pinheiro / DeLeTe    @pinheirofellipe www.vivaolinux.com.br/~d3l3t3	        	##
-##Script para enviar fotos para sua conta no Twitpic.					     	     	##
+##Script para enviar fotos para sua conta no Twitpic.							##
+## Versão : 0.1												##
 ##	Agradecimento ao site	www.vivaolinux.com.br			 			     	##
 ## Para rodar o script é preciso instalar o YAD e o CURL - Em Debian-> sudo apt-get install yad curl 	##
 ##########################################################################################################
