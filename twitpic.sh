@@ -2,19 +2,31 @@
 
 
 ##########################################################################################################
-##Autor: Fellipe Pinheiro / DeLeTe    @pinheirofellipe www.vivaolinux.com.br/~d3l3t3	        	##
-##Script para enviar fotos para sua conta no Twitpic.							##
-## Versão : 0.1												##
-##	Agradecimento ao site	www.vivaolinux.com.br			 			     	##
-## Para rodar o script é preciso instalar o YAD e o CURL - Em Debian-> sudo apt-get install yad curl 	##
+## 	~Autor: Fellipe Pinheiro / DeLeTe    @pinheirofellipe www.vivaolinux.com.br/~d3l3t3	        ##
+##	~Agradecimentos ao site: www.vivaolinux.com.br			 			     	##
+##													##
+##	~Versão: 0.1											##
+##													##			
+##	~Função:											##
+##	Script para enviar fotos/imagens para o site Twitpic.com. Use a conta do Twitpic ou do Twitter!	##
+##													##
+##	~Instalação:											##
+##	OBS:Para rodar o script é preciso instalar o YAD e o CURL	 				##
+##	Em Debian-Like :										##
+##	sudo add-apt-repository ppa:webupd8team/y-ppa-manager && sudo apt-get update 			##
+##	sudo apt-get install yad curl									##
+##													##
+##													##
 ##########################################################################################################
+
+
 
 LOGIN() {
 	##LOGIN
 
 	_login=$(\
-		yad --entry \
-		--entry-label="Login" \
+		yad --entry\
+		--entry-label="Login"\
 		--completion \
 		--editable \
 		--title="Entre com seu login." \
@@ -23,10 +35,9 @@ LOGIN() {
 
 
 	##SENHA
-
 	_senha=$(\
 		yad --entry \
-		--entry-label="Senha" \
+		--entry-label="Senha"\
 		--completion \
 		--editable \
 		--hide-text \
@@ -69,7 +80,7 @@ ADD_MSG() {
 ## Envia a foto 
 ENVIA() {
 	curl -k -F "media=@$_foto" -F "username=$_login" -F "password=$_senha" -F "message=$_msg" https://twitpic.com/api/uploadAndPost > /tmp/site.txt
-
+	#cat /tmp/site.txt | grep -i http | cut -f2 -d\> | sed 's/<\/mediaurl/  /' > /tmp/site.txt
 
 	if [ $? -ne 0 ] ; then # Testa se o comando a cima deu erro.
 		yad --title="Error no envio!" \
