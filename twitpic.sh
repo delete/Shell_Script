@@ -35,6 +35,7 @@ LOGIN() {
 
 
 	##SENHA
+
 	_senha=$(\
 		yad --entry \
 		--entry-label="Senha"\
@@ -51,6 +52,7 @@ LOGIN() {
 ## Adiciona a foto
 ADD_FOTO() {
 	##FOTO
+
 	_foto=$(\
 		yad --file \
 		--file \
@@ -65,6 +67,7 @@ ADD_FOTO() {
 ## Adicionar comentario da foto
 ADD_MSG() {
 	##MENSAGEM
+
 	_msg=$(\
 		yad --entry \
 		--entry-label="Comentario:" \
@@ -80,7 +83,6 @@ ADD_MSG() {
 ## Envia a foto 
 ENVIA() {
 	curl -k -F "media=@$_foto" -F "username=$_login" -F "password=$_senha" -F "message=$_msg" https://twitpic.com/api/uploadAndPost > /tmp/site.txt
-	#cat /tmp/site.txt | grep -i http | cut -f2 -d\> | sed 's/<\/mediaurl/  /' > /tmp/site.txt
 
 	if [ $? -ne 0 ] ; then # Testa se o comando a cima deu erro.
 		yad --title="Error no envio!" \
