@@ -6,9 +6,12 @@
 ##	~Agradecimentos ao site: www.vivaolinux.com.br			 			     	##
 ##													##
 ##	~Versão: 0.1											##
+<<<<<<< HEAD
 ##	~Versão: 0.2	-Layout novo.									##
 ##			-Envia várias fotos com o mesmo login sem precisar reabrir o mesmo programa.	##
 ##													##
+=======
+>>>>>>> 50b64c16af7fd074056048465f438a23432b5ddb
 ##													##			
 ##	~Função:											##
 ##	Script para enviar fotos/imagens para o site Twitpic.com. Use a conta do Twitpic ou do Twitter!	##
@@ -23,6 +26,7 @@
 ##########################################################################################################
 
 
+<<<<<<< HEAD
 ############
 ## Inicio ##
 ############
@@ -49,6 +53,8 @@ acao="$?"
 ####################
 ## Login da conta ##
 ####################
+=======
+>>>>>>> 50b64c16af7fd074056048465f438a23432b5ddb
 
 LOGIN() {
 	##LOGIN
@@ -118,7 +124,6 @@ ADD_MSG() {
 
 ENVIA() {
 	curl -k -F "media=@$_foto" -F "username=$_login" -F "password=$_senha" -F "message=$_msg" https://twitpic.com/api/uploadAndPost > /tmp/site.txt
-	#cat /tmp/site.txt | grep -i http | cut -f2 -d\> | sed 's/<\/mediaurl/  /' > /tmp/site.txt
 
 	if [ $? -ne 0 ] ; then # Testa se o comando a cima deu erro.
 		yad --title="Ops! Error no envio!" \
@@ -215,9 +220,14 @@ MENU() {
 
 }
 
+<<<<<<< HEAD
 ## Chama o menu principal
 
 INICIO
 
 	
 
+=======
+## Chama o menu
+MENU
+>>>>>>> 50b64c16af7fd074056048465f438a23432b5ddb
