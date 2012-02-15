@@ -14,10 +14,10 @@
 ##	Script para enviar fotos/imagens para o site Twitpic.com. Use a conta do Twitpic ou do Twitter!	##
 ##													##
 ##	~Instalação:											##
-##	OBS:Para rodar o script é preciso instalar o YAD e o CURL	 				##
-##	Em Debian-Like :										##
-##	sudo add-apt-repository ppa:webupd8team/y-ppa-manager && sudo apt-get update 			##
-##	sudo apt-get install yad curl									##
+##	  -Dependências:  YAD e o CURL						 			##
+##	  -Em Debian-Like:										##
+##	    sudo add-apt-repository ppa:webupd8team/y-ppa-manager && sudo apt-get update 		##
+##	    sudo apt-get install yad curl								##
 ##													##
 ##													##
 ##########################################################################################################
