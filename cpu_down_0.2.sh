@@ -1,4 +1,34 @@
 #!/bin/bash
+
+##################################################################################################
+## 	~Autor: Fellipe Pinheiro / DeLeTe    @pinheirofellipe www.vivaolinux.com.br/~d3l3t3	##
+##	~Agradecimento: Wladek Zacharski							##
+##				 			     					##
+##												##
+##	~Versão: 0.1										##
+##			-Liga e desliga os nucleos						##
+##												##
+##	~Versão: 0.2	-Programa usando  YAD.							##
+##			-Testa se o usuario é ROOT ou não.					##
+##												##
+##												##
+##	~Função:										##
+##	Mostra quantos nucleos o processador tem, e da opções de para-los.			##
+##												##
+##	~Instalação:										##
+##	--Dependencias : YAD 									##
+##	-Em Debian-Like :									##
+##	sudo add-apt-repository ppa:webupd8team/y-ppa-manager && sudo apt-get update 		##
+##	sudo apt-get install yad								##
+##												##
+##	~Execução:										##
+##	-Execute o programa como ROOT								##
+##												##
+##												##
+##################################################################################################
+
+
+
 ##Inicia todos os testes
 TESTA(){
 TESTA_CPU1
