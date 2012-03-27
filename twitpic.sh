@@ -7,17 +7,17 @@
 ##													##
 ##	~Versão: 0.1											##
 ##	~Versão: 0.2	-Layout novo.									##
-##			-Envia várias fotos com o mesmo login sem precisar reabrir o mesmo programa.	##
+##			-Envia várias fotos com o mesmo login sem precisar reabrir o 	programa.	##
 ##													##
 ##													##			
 ##	~Função:											##
 ##	Script para enviar fotos/imagens para o site Twitpic.com. Use a conta do Twitpic ou do Twitter!	##
 ##													##
 ##	~Instalação:											##
-##	OBS:Para rodar o script é preciso instalar o YAD e o CURL	 				##
-##	Em Debian-Like :										##
-##	sudo add-apt-repository ppa:webupd8team/y-ppa-manager && sudo apt-get update 			##
-##	sudo apt-get install yad curl									##
+##	  -Dependências:  YAD e o CURL						 			##
+##	  -Em Debian-Like:										##
+##	    sudo add-apt-repository ppa:webupd8team/y-ppa-manager && sudo apt-get update 		##
+##	    sudo apt-get install yad curl								##
 ##													##
 ##													##
 ##########################################################################################################
@@ -118,7 +118,7 @@ ADD_MSG() {
 
 ENVIA() {
 	curl -k -F "media=@$_foto" -F "username=$_login" -F "password=$_senha" -F "message=$_msg" https://twitpic.com/api/uploadAndPost > /tmp/site.txt
-	#cat /tmp/site.txt | grep -i http | cut -f2 -d\> | sed 's/<\/mediaurl/  /' > /tmp/site.txt
+	
 
 	if [ $? -ne 0 ] ; then # Testa se o comando a cima deu erro.
 		yad --title="Ops! Error no envio!" \
