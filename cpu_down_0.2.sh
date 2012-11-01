@@ -279,6 +279,7 @@ MENU() {
 	exit
 	fi
 
+	#op=$(echo $op | egrep -o '^[0-9]')	
 	op=$(echo $op | egrep -o '^[0-9]')	
 
 	case $op in
