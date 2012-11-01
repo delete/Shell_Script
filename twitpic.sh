@@ -7,7 +7,7 @@
 ##													##
 ##	~Versão: 0.1											##
 ##	~Versão: 0.2	-Layout novo.									##
-##			-Envia várias fotos com o mesmo login sem precisar reabrir o 	programa.	##
+##			-Envia várias fotos com o mesmo login sem precisar reabrir o programa.		##
 ##													##
 ##													##			
 ##	~Função:											##
