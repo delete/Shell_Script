@@ -1,0 +1,18 @@
+#!/bin/bash
+
+email="SEU_EMAIL"
+
+echo "Subject: Acesso SSH no servidor!" > /tmp/email_ssh.txt
+
+echo "ATENCAO - O Root acessou o (SERVIDOR) - `who`" >> /tmp/email_ssh.txt
+
+echo " " >> /tmp/email_shh.txt
+
+echo "Hora:  `date`" >> /tmp/email_ssh.txt
+
+echo " " >> /tmp/email_ssh.txt
+
+echo "Atencao: Root acessou de `who | cut -d"(" -f2 | cut -d")" -f1`"  >> /tmp/email_ssh.txt
+
+sleep 1
+ssmtp $email < /tmp/email_ssh.txt
