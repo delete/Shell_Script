@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 ##########################################################################################################
 ## 	~Autor: Fellipe Pinheiro / DeLeTe    @pinheirofellipe www.vivaolinux.com.br/~d3l3t3	        ##
 ##	~Agradecimentos ao site: www.vivaolinux.com.br			 			     	##
